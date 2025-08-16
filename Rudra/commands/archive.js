@@ -21,7 +21,7 @@ module.exports = {
     name: "archive",
     version: "2.0",
     hasPermission: 0,
-    credits: "Mirrykal + ChatGPT",
+    credits: "SaNaN + ChatGPT",
     description: "Search/download videos, music, docs, apk, images from archive.org",
     commandCategory: "media",
     usages: "<type> <query>",
