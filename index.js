@@ -19,10 +19,10 @@ app.get('/', function (req, res) {
 
 // Start the server and add error handling
 app.listen(port, () => {
-    logger(`Server is running on port ${port}...`, "[ MirryKal ]");
+    logger(`Server is running on port ${port}...`, "[ SaNaN ]");
 }).on('error', (err) => {
     if (err.code === 'EACCES') {
-        logger(`Permission denied. Cannot bind to port ${port}.`, "[ MirryKal ]");
+        logger(`Permission denied. Cannot bind to port ${port}.`, "[ SaNaN ]");
     } else {
         logger(`Server error: ${err.message}`, "[ Kripya Dhyan de ]");
     }
@@ -35,9 +35,9 @@ app.listen(port, () => {
 global.countRestart = global.countRestart || 0;
 
 function startBot(message) {
-    if (message) logger(message, "[ MirryKal ]");
+    if (message) logger(message, "[ SaNaN ]");
 
-    const child = spawn("node", ["--trace-warnings", "--async-stack-traces", "rudra.js"], {
+    const child = spawn("node", ["--trace-warnings", "--async-stack-traces", "sanan.js"], {
         cwd: __dirname,
         stdio: "inherit",
         shell: true
@@ -49,12 +49,12 @@ function startBot(message) {
             logger(`Bot exited with code ${codeExit}. Restarting... (${global.countRestart}/5)`, "[ Rudra ]");
             startBot();
         } else {
-            logger(`Bot stopped after ${global.countRestart} restarts.`, "[ MirrKal]");
+            logger(`Bot stopped after ${global.countRestart} restarts.`, "[ SaNaN ]");
         }
     });
 
     child.on("error", (error) => {
-        logger(`An error occurred: ${JSON.stringify(error)}`, "[ Rudra ]");
+        logger(`An error occurred: ${JSON.stringify(error)}`, "[ Sanan ]");
     });
 }
 
@@ -64,12 +64,12 @@ function startBot(message) {
 
 axios.get("https://raw.githubusercontent.com/priyanshu192/bot/main/package.json")
     .then((res) => {
-        logger(res.data.name, "[ Mirrykal ]");
-        logger(`Version: ${res.data.version}`, "[ Mirrykal]");
-        logger(res.data.description, "[ Mirrykal ]");
+        logger(res.data.name, "[ SaNaN ]");
+        logger(`Version: ${res.data.version}`, "[ SaNaN]");
+        logger(res.data.description, "[ SaNaN ]");
     })
     .catch((err) => {
-        logger(`Failed to fetch update info: ${err.message}`, "[ Rudra ]");
+        logger(`Failed to fetch update info: ${err.message}`, "[ Sanan ]");
     });
 
 // Start the bot
