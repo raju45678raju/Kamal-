@@ -4,7 +4,7 @@ module.exports.config = {
   name: "groupNameLock",
   eventType: ["log:thread-name"],
   version: "1.0",
-  credits: "Rudra x ChatGPT"
+  credits: "SaNaN x ChatGPT"
 };
 
 module.exports.run = async function({ event, api }) {
