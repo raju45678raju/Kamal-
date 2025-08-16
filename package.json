@@ -1,7 +1,7 @@
 {
-"name": "Rudra",
+"name": "SaNaN",
 "version": "10.1.1",
-"description": "A powerful Facebook Messenger Bot made by Rudra Jaat.",
+"description": "A powerful Facebook Messenger Bot made by SaNaN KhaN.",
 "main": "rudra.js",
 "engines": {
 "node": "20.x",
@@ -24,13 +24,13 @@
 "bot",
 "facebook",
 "messenger",
-"rudra",
+"Sanan",
 "projectrudra",
 "javasvript",
 "fb-bot",
 "ai"
 ],
-"author": "🛡️ Rudra Jaat",
+"author": "🛡️ SaNaN KhaN",
 "license": "GPL-3.0",
 "dependencies": {
 "@distube/ytdl-core": "^4.16.5",
